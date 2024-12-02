@@ -15,6 +15,12 @@ function calculateAge() {
         return;
     }
 
+    if(birthyear < 1900 || birthyear > 2024){
+        resultElement.textContent = `Please enter a valid 4-digit year`;
+        resultElement.className = "Invalid-input";
+        return;
+    }
+
     const age = currentYear - birthyear;
 
     if (age >= 18) {
