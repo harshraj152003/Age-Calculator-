@@ -58,3 +58,11 @@
     font-weight: bold;
     text-align: center;
 }
+
+.Invalid-input {
+    margin-top: 10px;
+    background-color:blanchedalmond;
+    color:red;
+    font-weight: bold;
+    text-align: center;
+}

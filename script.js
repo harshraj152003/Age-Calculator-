@@ -9,6 +9,12 @@ function calculateAge() {
         return;
     }
 
+    if(birthyear.length != 4 || isNaN(birthyear)){
+        resultElement.textContent = `Please enter a valid 4-digit year`;
+        resultElement.className = "Invalid-input";
+        return;
+    }
+
     const age = currentYear - birthyear;
 
     if (age >= 18) {
@@ -20,7 +26,11 @@ function calculateAge() {
         resultElement.textContent = `You are a Teen! 
         Enjoy your youth, dream big, and remember that your potential is limitless!`;
         resultElement.className = "result-teen";
-    } else {
+    } else if(age < 0){
+        resultElement.textContent = 'Invalid Input! please enter right BirthYear!';
+        resultElement.className = "Invalid-input";
+    }
+    else {
         resultElement.textContent = "Please enter a valid birth year!";
         resultElement.className = "";
     }

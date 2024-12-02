@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Age Calculator</h1>
         <label for="birthyear">Enter birthYear</label> <br>
-        <input type="text" name="" id="birthyear" placeholder="in years eg: 2003" required> <br>
+        <input type="number" name="" id="birthyear" min="1900" max="2099" placeholder="YYYY" required> <br>
         <button type="submit" onclick="calculateAge()">Check Age</button>
         <p id="result"></p>
     </div>
